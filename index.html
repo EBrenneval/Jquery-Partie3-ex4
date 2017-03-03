@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Partie3 ex4</title>
+  </head>
+  <body>
+<button type="button" name="button" id="button1">pixel</button>
+<button type="button" name="button" id="button2">color</button>
+<button type="button" name="button" id="button3">initial</button>
+<button type="button" name="button" id="button4">disp</button>
+<button type="button" name="button" id="button5">affich</button>
+<div id ="rectangle"></div>
+
+<script>
+var height = 100;          // declaration de la variable height
+$("#button1").click(function(){  // au clik du btn 1
+  if (height ==100) {     // si la taille est egale a 100px
+    height = 10;          // la taille reviendra a 10
+  }else {                        //sinon
+    height +=10;                    // la hauteur augmente de 10px au cliks
+  }
+  $("#rectangle").css("height", height + "px")  // le rectangle augmente a chaque clik
+})
+$("#button2").click(function(){
+  $("#rectangle").css("background-color", "green");  // au clik la couleur sera verte
+})
+$("#button3").click(function(){
+  $("#rectangle").css("background-color","pink");  // au clik la couleur revient initial
+})
+$("#button4").click(function(){
+  $("#rectangle").hide();  // au click le rectangle disparait
+})
+$("#button5").click(function(){
+  $("#rectangle").show();  // au click le rect apparait
+})
+
+
+</script>
+
+  </body>
+</html>
